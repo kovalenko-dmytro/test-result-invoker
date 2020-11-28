@@ -20,9 +20,9 @@ public class UploadTestResultController {
     }
 
     @PostMapping(value = "/tests/path")
-    public ModelAndView upload(@RequestParam("path") String path) {
+    public ModelAndView upload(@RequestParam("path") String path, @RequestParam("login") String login, @RequestParam("password") String password) {
         ModelAndView view = new ModelAndView();
-        uploadTestResultService.upload(path);
+        uploadTestResultService.upload(path, login, password);
         view.setViewName("redirect:/index");
         return view;
     }

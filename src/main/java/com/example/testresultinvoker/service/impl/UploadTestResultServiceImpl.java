@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class UploadTestResultServiceImpl implements UploadTestResultService {
 
     @Override
-    public void upload(String path) {
+    public void upload(String path, String login, String password) {
         String pathToDir = path;
     }
 }
